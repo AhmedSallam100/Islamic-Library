@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/24795d84c015a4e8895cd995ef838852?family=KFGQPC+HAFS+Uthmanic+Script");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@
   --white-color: #fff;
   --header-color: #26ab7b; /* Header */
   --main-color: #00d084; /* h1,...... */
+  --sec-color: #40c491;
   --btn-color: #008655;
   --sidebar-color: #02b473;
   --gray-color: #f7f7f7;
@@ -113,7 +115,7 @@ body::-webkit-scrollbar-thumb {
 }
 .sidebar {
   background-color: var(--white-color);
-  width: 40%;
+  width: 600px;
   height: 100%;
   border-radius: 6px;
 }
@@ -121,7 +123,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px 16px;
 }
@@ -177,6 +179,7 @@ body::-webkit-scrollbar-thumb {
 .main-h2 {
   position: relative;
   width: fit-content;
+  font-size: 24px;
 }
 .main-h2::before {
   content: "";
@@ -191,7 +194,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 .box p {
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 10px;
 }
 /******** End Boxes ********/
@@ -218,11 +221,11 @@ body::-webkit-scrollbar-thumb {
 .right-pray h2,
 .left-pray h2 {
   color: var(--main-color);
-  font-size: 35px;
+  font-size: 32px;
 }
 .right-pray p,
 .left-pray p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
 }
 .center-pray {
@@ -291,7 +294,7 @@ option {
   padding: 10px;
   width: -webkit-fill-available;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 4px;
 }
@@ -308,7 +311,7 @@ option {
   gap: 10px;
 }
 .listen img {
-  width: 70px;
+  width: 67px;
   border-radius: 50%;
 }
 .listen p {
@@ -319,3 +322,136 @@ option {
   width: 100px;
 }
 /******** End Left ********/
+/******** Start Quran Page ********/
+.quran-btn {
+  display: flex;
+  align-items: center;
+  /* width: 300px; */
+  gap: 10px;
+  color: white;
+  background: var(--btn-color);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.center-quran {
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+.quran-btn:active {
+  transform: scale(0.9);
+}
+.quran-btn img {
+  width: 50px;
+}
+.left-quran {
+  width: 650px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: var(--white-color);
+}
+.hadis {
+  margin: 15px 0;
+  font-size: 18px;
+}
+hr {
+  border: 1px solid var(--main-color);
+}
+/******** End Quran Page ********/
+/******** Start Listen Page ********/
+.center-listen,
+.left-listen {
+  background-color: var(--white-color);
+  border-radius: 6px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.center-listen {
+  width: -webkit-fill-available;
+}
+.left-listen {
+  width: 800px;
+}
+.topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 10px;
+  /* position: sticky;
+  top: 10px; */
+  border-radius: 6px;
+  background-color: var(--sec-color);
+}
+.topic p,
+.topic h2 {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "KFGQPC HAFS Uthmanic Script";
+}
+.page-num {
+  background-image: url(../imgs/star.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: fit-content;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.part {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sura {
+  font-size: 30px;
+  font-size: 28px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "KFGQPC HAFS Uthmanic Script";
+}
+.sura p {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "KFGQPC HAFS Uthmanic Script";
+}
+.choose-sura {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--main-color);
+}
+.choose-sura:not(:first-child) {
+  margin-top: 10px;
+}
+.sura-num {
+  background-image: url(../imgs/star.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: fit-content;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.choose-sura .sura-data {
+  font-size: 18px;
+}
+.read-btn {
+  width: 110px;
+}
+.all-data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/******** End Listen Page ********/
