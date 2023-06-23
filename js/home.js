@@ -4,11 +4,10 @@ let cityName = document.querySelector(".city-name");
 select.addEventListener("input", () => {
   cityName.innerHTML = select.value;
 });
-
 let prayTime = document.querySelector(".left-time-pray");
 
 setInterval(() => {
-  prayTime.innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
+  prayTime.innerHTML = `${new Data().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
 }, 1000);
 
 // Api Pray Time
@@ -28,7 +27,6 @@ myApi.onreadystatechange = function () {
   if (myApi.status === 200 && myApi.readyState === 4) {
     let prayObj = JSON.parse(myApi.responseText);
     console.log(prayObj);
-
     let timePray = document.querySelectorAll(".time-pray p");
     console.log(timePray);
     timePray[0].textContent = prayObj.data.timings.Fajr + "م";
